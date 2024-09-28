@@ -1,12 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 2.5em;
+    }
+    h2 {
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      color: #555;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .section ul li {
+      margin-bottom: 10px;
+    }
+    .section ul li span {
+      font-weight: bold;
+    }
+    .contact-info {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .contact-info p {
+      margin: 5px 0;
+    }
+    .skills {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .skills div {
+      width: 45%;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <p>Hello, World!</p>
+  <div class="container">
+    <!-- Header Section -->
+    <header>
+      <h1>[Your Name]</h1>
+      <div class="contact-info">
+        <p>Email: your.email@example.com</p>
+        <p>Phone: +123-456-7890</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+      </div>
+    </header>
+
+    <!-- Summary Section -->
+    <div class="section">
+      <h2>Summary</h2>
+      <p>I am a [your profession] with extensive experience in [your expertise]. I have a strong passion for [your interest or field] and have worked on various projects involving [skills/technologies you excel at].</p>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="section">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <span>Job Title</span> – Company Name<br>
+          <span>Duration:</span> January 2020 – Present<br>
+          <span>Responsibilities:</span> Managed and developed [list of specific tasks]. Led [specific project] which resulted in [achievement or outcome].
+        </li>
+        <li>
+          <span>Job Title</span> – Company Name<br>
+          <span>Duration:</span> June 2017 – December 2019<br>
+          <span>Responsibilities:</span> [Describe your tasks, achievements, and contributions].
+        </li>
+      </ul>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <span>Degree:</span> Bachelor of Science in [Your Field]<br>
+          <span>Institution:</span> University Name<br>
+          <span>Year:</span> Graduated in [Year]
+        </li>
+      </ul>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section skills">
+      <div>
+        <h2>Technical Skills</h2>
+        <ul>
+          <li>Programming Languages: [List languages]</li>
+          <li>Frameworks: [List frameworks]</li>
+          <li>Tools: [List tools]</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Soft Skills</h2>
+        <ul>
+          <li>Leadership and Team Management</li>
+          <li>Effective Communication</li>
+          <li>Problem-Solving and Critical Thinking</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
