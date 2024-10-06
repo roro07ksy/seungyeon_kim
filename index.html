@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seungyeon Kim, Ph.D.</title>
+  <!-- Include Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -37,41 +40,44 @@
       position: relative;
       z-index: 1; /* Content above background */
     }
-    .header {
-  display: flex;
-  align-items: center; /* Vertically center the content within the header */
-  justify-content: flex-start; /* Align content horizontally from the start */
-  margin-bottom: 20px;
-  min-height: 10vh; /* This can be removed if you don't want the full height constraint */
-}
 
-.header-left {
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Horizontally center the items */
-  text-align: center;
-  margin-right: 20px;
-}
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-right: 20px;
+    }
+
     .header img {
       margin-top: 30px;
       border-radius: 50%;
       width: 200px;
       height: 200px;
-      object-fit: cover; /* Ensures the image covers the circle while maintaining aspect ratio */
-      margin-right: 20px;
+      object-fit: cover;
     }
+
     .header-info {
       text-align: center;
-      flex: 1;
     }
+
     h1 {
       margin: 0;
       font-size: 2.0em;
       color: #20334b;
     }
+
     .contact-info {
-    text-align: center;
-    margin-top: 15px;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 10px; /* Reduced space between contact info and research areas */
     }
 
     .contact-info p {
@@ -86,33 +92,43 @@
     .contact-info a:hover {
       text-decoration: underline;
     }
+
     .introduction {
       margin-top: 20px;
-      font-size: 1.0em;
+      font-size: 0.9em;
       color: #282828;
       text-align: left;
+      margin-right: 50px;
+      margin-left: 50px;
+      text-align: justify;
     }
+
     h2 {
       border-bottom: 2px solid #333;
       padding-bottom: 5px;
       color: #555;
     }
+
     .section {
       margin-bottom: 20px;
-      margin-right : 30px;
-      margin-left  : 30px;
+      margin-right: 30px;
+      margin-left: 30px;
     }
+
     .section ul {
       list-style-type: disc;
       padding: 0;
     }
+
     .section ul li {
       margin-bottom: 10px;
     }
+
     .section ul li span {
       font-weight: bold;
       color: #1c578e;
     }
+
     footer {
       text-align: center;
       padding: 10px;
@@ -147,29 +163,96 @@
     .research-item a:hover {
       text-decoration: underline;
     }
-    .research-images img.research-img {
-    width: auto;
-    height: 225px; /* Match the height of the YouTube video */
-    object-fit: cover; /* Ensure the image scales properly while maintaining aspect ratio */
-    border-radius: 10px;
-  }
-  .research-areas {
-    display: flex;
-    gap: 10px; /* Spacing between the boxes */
-    margin-top: 10px;
-    flex-wrap: wrap; /* Allows the boxes to wrap to the next line if needed */
-  }
 
-  .research-box {
-    background-color: #e0e0e0; /* Light grey background */
-    padding: 10px 15px; /* Padding inside the boxes */
-    border-radius: 12px; /* Rounded corners */
-    font-size: 0.8em;
-    color: #0077ff;
-    font-weight: bold;
-    display: inline-block;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  }
+    .research-images img.research-img {
+      width: auto;
+      height: 225px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .research-areas {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .research-box {
+      background-color: #e0e0e0;
+      padding: 10px 15px;
+      border-radius: 12px;
+      font-size: 0.8em;
+      color: #0077ff;
+      font-weight: bold;
+      display: inline-block;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+        padding: 15px;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header-info {
+        text-align: center;
+      }
+
+      .header-left {
+        margin-bottom: 20px;
+      }
+
+      .header img {
+        margin-top: 0;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .research-areas {
+        justify-content: center;
+      }
+
+      .research-box {
+        font-size: 0.9em;
+      }
+
+      .introduction {
+        font-size: 0.9em;
+        text-align: justify;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.3em;
+      }
+
+      .header img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .introduction {
+        font-size: 0.85em;
+      }
+
+      .contact-info {
+        font-size: 0.9em;
+      }
+    }
   </style>
   <script>
     window.addEventListener('scroll', function() {
@@ -188,26 +271,32 @@
     <header class="header">
       <div class="header-left">
         <img src="portrait.jpg" alt="Seungyeon Kim's Portrait">
-        <div class="contact-info">
-          <p>Email: ksy0711 at snu.ac.kr</p>
-          <p><a href="https://scholar.google.com/citations?user=URw8Y18AAAAJ&hl=en" target="_blank">Google Scholar</a></p>
-        </div>
       </div>
       <div class="header-info">
         <h1>Seungyeon Kim, Ph.D.</h1>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> ksy0711 at snu.ac.kr</p>
+          <p><i class="fab fa-google"></i> <a href="https://scholar.google.com/citations?user=URw8Y18AAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+        </div>
         <div class="research-areas">
           <span class="research-box">Robotic hand design</span>
           <span class="research-box">Telemanipulation</span>
           <span class="research-box">Humanoid</span>
           <span class="research-box">AI</span>
         </div>
-        <!-- Brief Introduction -->
-        <div class="introduction">
-          <p>Seungyeon Kim received the B.S. degree from the Department of Mechanical and Aerospace Engineering, Seoul National University, Seoul, South Korea, in 2015, and the Ph.D. degree in robotics from the Department of Intelligent Convergence Systems, Seoul National University, Seoul, South Korea, in 2023. From 2023 to 2024, he was a staff engineer in the Autonomous Material Development TU at the <b>Samsung Advanced Institute of Technology(SAIT)</b>, Gyeonggi-do, South Korea. From October 2024, he has been a principal engineer at <b>Robros Inc.</b>, Seoul, South Korea. His research interests include robotic hand design, telemanipulation, and AI-based grasping for multi-fingered robotic hands.</p>
-        </div>
       </div>
     </header>
 
+    <!-- Introduction Section -->
+    <div class="introduction">
+      <p>Seungyeon Kim received the B.S. degree from the Department of Mechanical and Aerospace Engineering, Seoul National University, Seoul, South Korea, in 2015, and the Ph.D. degree in robotics from the Department of Intelligent Convergence Systems, Seoul National University, Seoul, South Korea, in 2023. From 2023 to 2024, he was a staff engineer in the Autonomous Material Development TU at the <b>Samsung Advanced Institute of Technology(SAIT)</b>, Gyeonggi-do, South Korea. From October 2024, he has been a principal engineer at <b>Robros Inc.</b>, Seoul, South Korea. His research interests include robotic hand design, telemanipulation, and AI-based grasping for multi-fingered robotic hands.</p>
+    </div>
+
+    <!-- Additional sections like Research, Education, etc. -->
+    <!-- ... -->
+
+
+    
     <!-- Representative Research Section -->
     <div class="section">
       <h2>Selected Publications</h2>
@@ -356,7 +445,6 @@
         <li>You, S., Kim, S., Sim, J., Sung, E., & Park, J. 2021. Harmonic Reducing System, and Power Transmission System and Robot System Including the Same. Republic of Korea Patent Application 1020210182330, filed Dec 2021. Patent Pending</li>
       </ul>
     </div>
-
 
     <!-- Footer Section -->
     <footer>
